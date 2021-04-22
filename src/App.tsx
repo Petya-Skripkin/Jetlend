@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react';
+
+import { Demo } from './pages';
 
 const App = () => {
-  return <div>hello</div>;
+  return (
+    <Demo />
+  );
 };
 
 export default App;
