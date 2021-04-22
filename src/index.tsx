@@ -3,12 +3,18 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
 import App from './app';
+import GlobalStyle from "./styles";
+import GlobalFonts from "./styles/fonts";
 
 import "./index.css";
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+  <>
+    <GlobalStyle />
+    <GlobalFonts />
+    <App />
+  </>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

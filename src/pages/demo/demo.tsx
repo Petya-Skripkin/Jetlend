@@ -6,6 +6,7 @@ const Demo = () => {
   return (
     <div>
       <Icon iconName="entrance" />
+      Hello world
     </div>
   );
 }
