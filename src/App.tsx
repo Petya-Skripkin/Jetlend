@@ -5,11 +5,17 @@ import { Demo } from "./pages";
 
 import { urls } from "./constants";
 
+import { AppRoute } from "./components";
+import { MAIN_MENU } from "./mock";
+
 const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path={urls.MAIN} component={Demo} />
+        <AppRoute
+          appRoute={MAIN_MENU}
+          component={() => <Route path={urls.MAIN} component={Demo} />}
+        />
       </Switch>
     </BrowserRouter>
   );
