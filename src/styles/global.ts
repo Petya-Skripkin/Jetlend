@@ -1,6 +1,18 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 import { colors } from "../constants";
+
+export const BaseButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 14px 34px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: ${colors.CaribbeanGreen};
+  color: ${colors.white};
+`;
 
 const globalStyles = createGlobalStyle`
   *,
