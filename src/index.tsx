@@ -1,6 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
 
 import App from './app';
 import GlobalStyle from "./styles";
@@ -9,11 +10,11 @@ import GlobalFonts from "./styles/fonts";
 import "./index.css";
 
 ReactDOM.render(
-  <>
+  <Router>
     <GlobalStyle />
     <GlobalFonts />
     <App />
-  </>,
+  </Router>,
   document.getElementById("root")
 );
 
