@@ -11,9 +11,10 @@ export interface IHeader {
   menu: IMenu[];
   text: string;
   iconName: iconName;
+  onClick: () => void;
 }
 
-const AppHeader = ({logo, menu, text, iconName}: IHeader) => {
+const AppHeader = ({logo, menu, text, iconName, onClick}: IHeader) => {
   return (
     <Styles.Content>
       <Styles.Logo src={logo} />
@@ -23,7 +24,7 @@ const AppHeader = ({logo, menu, text, iconName}: IHeader) => {
             menu={menu}
           />
         </Styles.NavMenu>
-        <BaseButton>{text} <Styles.LogIcon iconName={iconName} /></BaseButton>
+        <BaseButton onClick={onClick}>{text} <Styles.LogIcon iconName={iconName} /></BaseButton>
       </Styles.Navigation>
     </Styles.Content>
   );

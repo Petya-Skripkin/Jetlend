@@ -22,4 +22,5 @@ export const MAIN_MENU: IHeader = {
       link: "/get",
     },
   ],
+  onClick: () => 0
 };
