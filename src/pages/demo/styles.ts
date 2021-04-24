@@ -8,11 +8,20 @@ export const ThirdBlock = styled.div`
   margin-top: 60px;
 `;
 
+export const Background = styled.div`
+  position: relative;
+  padding-top: 200px;
+  background-color: ${colors.AquaHaze};
+`;
+
 export const BlockProcent = styled.div`
   width: 90%;
   padding: 50px 100px;
-  position: relative;
-  top: -300px;
+  position: absolute;
+  top: -350px;
+  left: 0;
+  right: 0;
+  height: 476px;
   margin-left: auto;
   margin-right: auto;
   background-color: ${colors.white};

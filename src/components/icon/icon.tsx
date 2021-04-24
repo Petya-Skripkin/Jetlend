@@ -2,8 +2,15 @@ import React from "react";
 
 import { Svg } from "./styles";
 
-export type iconName = 
-  | "entrance";
+export type iconName =
+  | "entrance"
+  | "banki"
+  | "forbes"
+  | "merchant"
+  | "PBK"
+  | "republic"
+  | "statements"
+  | "vcru";
 
 interface IProps {
   iconName: iconName;
