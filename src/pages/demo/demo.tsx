@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Replenishment } from "../../components";
+import { Replenishment, Advantage } from "../../components";
+import { ThirdBlock } from "./styles";
 
 const Demo = () => {
   const [active, setActive] = React.useState("overview");
@@ -36,6 +37,27 @@ const Demo = () => {
         ]}
         onClick={() => 0}
       />
+      <ThirdBlock>
+        <Advantage
+          label="Преимущества оборотного кредита в JetLend"
+          block={[
+            {
+              title: "Решение за 10 секунд",
+              text:
+                "Просто загрузите два документы и мы оценим ваш бизнес почти моментально",
+            },
+            {
+              title: "Всё онлайн",
+              text: "Без поездок в офис - оформите кредит в личном кабинете",
+            },
+            {
+              title: "Без залога",
+              text:
+                "Одобряем кредит для бизнеса на основании оборотов по расчетным счетам",
+            },
+          ]}
+        />
+      </ThirdBlock>
     </div>
   );
 };
