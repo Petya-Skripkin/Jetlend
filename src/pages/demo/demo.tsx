@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Replenishment, Advantage } from "../../components";
+import { Replenishment, Advantage, ReverseCredit } from "../../components";
 import { ThirdBlock } from "./styles";
 
 const Demo = () => {
@@ -58,6 +58,25 @@ const Demo = () => {
           ]}
         />
       </ThirdBlock>
+
+      <ReverseCredit
+        bgImage="./bgReverseCredit.png"
+        description="Как получить оборотный кредит"
+        step={[
+          {
+            title: "Пройдите регистрацию",
+            isActive: true,
+          },
+          {
+            title: "Получите предварительное решение",
+            isActive: false,
+          },
+          {
+            title: "Пройдите верификацию и получите деньги",
+            isActive: false,
+          },
+        ]}
+      />
     </div>
   );
 };
