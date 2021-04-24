@@ -18,6 +18,7 @@ const globalStyles = createGlobalStyle`
   *,
   *:before,
   *:after {
+    font-weight: bold;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
