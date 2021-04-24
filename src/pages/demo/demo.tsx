@@ -1,10 +1,21 @@
 import React from "react";
 
-import { Replenishment, Advantage, ReverseCredit } from "../../components";
-import { ThirdBlock } from "./styles";
+import {
+  Replenishment,
+  Advantage,
+  ReverseCredit,
+  BorrowerCalculator,
+} from "../../components";
+import { BaseButton } from "../../styles/global";
+import * as Styles from "./styles";
 
 const Demo = () => {
   const [active, setActive] = React.useState("overview");
+  const [value, setValue] = React.useState("")
+
+  const Change = (event: string) => {
+    setValue(event);
+  }
 
   return (
     <div>
@@ -37,7 +48,7 @@ const Demo = () => {
         ]}
         onClick={() => 0}
       />
-      <ThirdBlock>
+      <Styles.ThirdBlock>
         <Advantage
           label="Преимущества оборотного кредита в JetLend"
           block={[
@@ -57,7 +68,7 @@ const Demo = () => {
             },
           ]}
         />
-      </ThirdBlock>
+      </Styles.ThirdBlock>
 
       <ReverseCredit
         bgImage="./bgReverseCredit.png"
@@ -77,6 +88,36 @@ const Demo = () => {
           },
         ]}
       />
+
+      <Styles.BlockProcent>
+        <Styles.Description>Калькулятор заемщика</Styles.Description>
+        <Styles.Conteiner>
+          <Styles.Content>
+            <BorrowerCalculator
+              title="Калькулятор заемщика"
+              startSum={500000}
+              finishSum={10000000}
+              vailut="руб."
+              type="руб."
+              onChange={(e) => Change(e.toString())}
+            />
+            <br />
+            <BorrowerCalculator
+              title="Калькулятор заемщика"
+              startSum={1}
+              finishSum={12}
+              vailut="Месяц"
+              type="мес."
+              onChange={(e) => console.log(e)}
+            />
+          </Styles.Content>
+          <Styles.Payment>
+            <Styles.Specification>Ежемесячный платеж</Styles.Specification>
+            <Styles.Sum>{value}</Styles.Sum>
+            <BaseButton>Получить кредит</BaseButton>
+          </Styles.Payment>
+        </Styles.Conteiner>
+      </Styles.BlockProcent>
     </div>
   );
 };
