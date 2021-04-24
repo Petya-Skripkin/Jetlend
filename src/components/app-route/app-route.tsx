@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, RouteProps } from "react-router-dom";
-import { Redirect } from "react-router";
 
 import AppLayout from "./app-layaut";
 import { IHeader } from "./app-header/app-header";

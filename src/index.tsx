@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
-import App from './app';
+import App from './App';
 import GlobalStyle from "./styles";
 import GlobalFonts from "./styles/fonts";
 
