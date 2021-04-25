@@ -6,7 +6,7 @@ import { Demo } from "./pages";
 import { urls } from "./constants";
 
 import { AppRoute } from "./components";
-import { MAIN_MENU } from "./mock";
+import { MAIN_MENU, MAIN_FOOTER } from "./mock";
 
 const App = () => {
   return (
@@ -14,6 +14,7 @@ const App = () => {
       <Switch>
         <AppRoute
           appRoute={MAIN_MENU}
+          appFooter={MAIN_FOOTER}
           component={() => <Route path={urls.MAIN} component={Demo} />}
         />
       </Switch>
