@@ -10,6 +10,10 @@ export type iconName =
   | "PBK"
   | "republic"
   | "statements"
+  | "fb"
+  | "inst"
+  | "youtube"
+  | "tg"
   | "vcru";
 
 interface IProps {
