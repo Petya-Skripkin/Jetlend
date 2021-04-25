@@ -6,3 +6,4 @@ export { default as Advantage } from "./advantage";
 export { default as ReverseCredit } from "./reverse-credit";
 export { default as BorrowerCalculator } from "./borrower-calculator";
 export { default as AboutAs } from "./about-as";
+export { default as Partner } from "./partner";
