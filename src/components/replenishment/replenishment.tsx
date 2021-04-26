@@ -43,7 +43,7 @@ const Replenishment = ({item, text, bgImage, logo, title, btname, onClick}: IRep
             </Styles.Item>
           ))}
         </Styles.List>
-        <BaseButton>{btname}</BaseButton>
+        <Styles.Button>{btname}</Styles.Button>
       </Styles.Conteiner>
     </Styles.Gradient>
   );

@@ -6,14 +6,24 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   width: 100%;
   padding: 5% 5%;
   background-color: ${colors.black};
+
+  @media(max-width: 1200px) {
+    flex-direction: column;
+  }
 `;
 
 export const IconConteiner = styled.div`
   display: flex;
   margin-top: 40px;
+
+  @media (max-width: 1000px) {
+    position: absolute;
+    bottom: 10px;
+  }
 `;
 
 export const Logo = styled.img`
@@ -38,6 +48,10 @@ export const LogIcon = styled(Icon)`
 export const LinkContent = styled.span`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
 `;
 
 export const Link = styled.a`
@@ -54,6 +68,12 @@ export const Adress = styled.nav`
   color: ${colors.white};
   font-weight: 300;
   font-size: 13px;
+
+  @media(max-width: 1000px){
+    width: 80%;
+    font-size: 11px;
+    margin: 23px 0;
+  }
 `;
 
 export const LastContent = styled.nav`
@@ -61,4 +81,9 @@ export const LastContent = styled.nav`
   color: ${colors.white};
   font-size: 13px;
   font-weight: normal;
+
+  @media (max-width: 1000px) {
+    width: 80%;
+    font-size: 11px;
+  }
 `;

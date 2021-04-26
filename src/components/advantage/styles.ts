@@ -4,6 +4,7 @@ import { colors } from "../../constants";
 export const Heading = styled.p`
   margin-bottom: 37px;
   font-size: 35px;
+  text-align: center;
 `;
 
 export const Content = styled.nav`

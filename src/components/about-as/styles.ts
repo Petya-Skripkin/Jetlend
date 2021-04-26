@@ -7,6 +7,10 @@ export const Title = styled.p`
   font-size: 35px;
   font-weight: 700;
   text-align: center;
+
+  @media(max-width: 1000px){
+    font-size: 25px;
+  }
 `;
 
 export const Link = styled.a`
@@ -16,12 +20,17 @@ export const Link = styled.a`
   color: ${colors.CaribbeanGreen};
   text-decoration: none;
   cursor: pointer;
+
+  @media (max-width: 1000px) {
+    font-size: 25px;
+  }
 `;
 
 export const Conteiner = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 
 export const Block = styled.div`
@@ -37,6 +46,12 @@ export const Block = styled.div`
   &:hover {
     background-color: ${colors.CaribbeanGreen};
     fill: ${colors.white};
+  }
+
+  @media (max-width: 1000px) {
+    width: 133px;
+    height: 96px;
+    margin: 1%;
   }
 `;
 
