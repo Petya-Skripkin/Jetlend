@@ -12,6 +12,10 @@ export const BaseButton = styled.button`
   font-weight: bold;
   background-color: ${colors.CaribbeanGreen};
   color: ${colors.white};
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 const globalStyles = createGlobalStyle`

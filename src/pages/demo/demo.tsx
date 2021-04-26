@@ -116,7 +116,7 @@ const Demo = () => {
             <Styles.Payment>
               <Styles.Specification>Ежемесячный платеж</Styles.Specification>
               <Styles.Sum>{value}</Styles.Sum>
-              <BaseButton>Получить кредит</BaseButton>
+              <Styles.Button>Получить кредит</Styles.Button>
             </Styles.Payment>
           </Styles.Conteiner>
         </Styles.BlockProcent>

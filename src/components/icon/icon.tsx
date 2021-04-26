@@ -14,6 +14,7 @@ export type iconName =
   | "inst"
   | "youtube"
   | "tg"
+  | "menu"
   | "vcru";
 
 interface IProps {

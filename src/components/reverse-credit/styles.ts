@@ -9,6 +9,10 @@ export const Gradient = styled.div<{ bgImage: string }>`
   background-repeat: no-repeat;
   background-size: cover;
   color: ${colors.white};
+
+  @media (max-width: 660px) {
+    padding: 1%;
+  }
 `;
 
 export const StepItem = styled.li`
@@ -102,6 +106,11 @@ export const Description = styled.p`
   font-size: 35px;
   margin-bottom: 54px;
   text-align: center;
+
+  @media (max-width: 660px) {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const Container = styled.ul`

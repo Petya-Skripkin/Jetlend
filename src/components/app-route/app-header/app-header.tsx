@@ -14,20 +14,43 @@ export interface IHeader {
   onClick: () => void;
 }
 
-const AppHeader = ({logo, menu, text, iconName, onClick}: IHeader) => {
+const AppHeader = ({ logo, menu, text, iconName, onClick }: IHeader) => {
+  const [open, setOpen] = React.useState(false);
+
   return (
     <Styles.Content>
-      <Styles.Logo src={logo} />
+      {!open && <Styles.Logo src={logo} />}
       <Styles.Navigation>
         <Styles.NavMenu>
-          <Menu
-            menu={menu}
-          />
+          <Menu menu={menu} />
         </Styles.NavMenu>
-        <BaseButton onClick={onClick}>{text} <Styles.LogIcon iconName={iconName} /></BaseButton>
+        <BaseButton onClick={onClick}>
+          {text} <Styles.LogIcon iconName={iconName} />
+        </BaseButton>
       </Styles.Navigation>
+
+      <Styles.BurgerButton open={open} onClick={() => setOpen(!open)}>
+        {!open && <Styles.BurgerIcon iconName="menu" />}
+
+        {open && (
+          <>
+            <Styles.BurgerList>
+              {menu.map((item) => (
+                <Styles.BurgerItems key={item.title}>
+                  <Styles.BurgerLinks to={item.link}>
+                    {item.title}
+                  </Styles.BurgerLinks>
+                </Styles.BurgerItems>
+              ))}
+            </Styles.BurgerList>
+            <BaseButton onClick={() => 0}>
+              {text}
+            </BaseButton>
+          </>
+        )}
+      </Styles.BurgerButton>
     </Styles.Content>
   );
-}
+};
 
 export default AppHeader;

@@ -5,25 +5,42 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   background-color: ${colors.CaribbeanGreen};
+
+  @media(max-width: 1125px){
+    flex-wrap: wrap;
+  }
 `;
 
 export const Image = styled.img`
   width: 50%;
   height: 420px;
   border: none;
+
+  @media (max-width: 1125px) {
+    width: 100%;
+  }
 `;
 
 export const Video = styled.iframe`
   width: 50%;
   height: 420px;
   border: none;
+
+  @media (max-width: 1125px) {
+    width: 100%;
+  }
 `;
 
 export const Conteiner = styled.nav`
   width: 50%;
-  height: 420px;
+  height: 100%;
   padding: 90px 120px;
   color: ${colors.white};
+
+  @media (max-width: 1125px) {
+    width: 100%;
+    padding: 3em 3.3em;
+  }
 `;
 
 export const Description = styled.p`
